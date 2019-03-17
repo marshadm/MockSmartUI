@@ -22,7 +22,7 @@ export class UserComponent implements OnInit {
 
   products = [];
   fetchData = function() {
-    this.httpss.get("http://localhost:5553/products").subscribe(
+    this.httpss.get("http://13.233.13.104/paymentdetails/currentTransaction").subscribe(
       (res: Response) => {
         this.products = res;
       }

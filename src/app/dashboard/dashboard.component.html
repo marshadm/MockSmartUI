@@ -9,10 +9,10 @@
     <label>Color: </label><input type = "text" name="color" id="color" placeholder="color" ngModel><br>
     <input type="submit" value = "Add Product" routerLink="/users">
   </form> -->
-
+<h1>iSmart</h1>
 <form id = "formNewProduct" name = "formNewProduct" #productData = "ngForm">
  
-  <table width="300" cellspacing="5" cellpadding="2">
+  <table class="table" class="table table-dark" >
         <tr>
           <td> <label>Transaction description </label></td>
          <td><input type = "text" name="transaction_details" id="transaction_details" placeholder="name" ngModel><br></td>
@@ -40,7 +40,7 @@
        </tr>
        <tr>
           <td> <label>Payment Type </label></td>
-          <select>
+          <select id="paymentType">
               <option value="MakePayment" id="makePayment">MakePayment</option>
               <option value="RecievePayment">RecievePayment</option>
             </select>

@@ -38,10 +38,10 @@ export class DashboardComponent implements OnInit {
       "spend_category":products.spend_category,
       "amount":products.amount,
       "date":products.date,
-      "makePayment": products.makePayment
+      "paymentType": products.paymentType
 
     }
-    this.httpss.post("http://10.117.189.184:9595/paymentdetails/savedetails", this.productObj).subscribe((res:Response) => {
+    this.httpss.post("http://13.233.13.104:9595/paymentdetails/savedetails", this.productObj).subscribe((res:Response) => {
       console.log(res);
      // this.isAdded = true;
     //  this.router.navigateTo("/users");

@@ -9,6 +9,7 @@ import { UserService } from './user.service'
 import { UserComponent } from './user/user.component';
 import { HttpClientModule} from '@angular/common/http';
 import { PolicyserviceService } from './serice-policy.service';
+import { TransComponent } from './trans/trans.component';
 
 
 const appRoutes:Routes = [
@@ -25,6 +26,11 @@ const appRoutes:Routes = [
     path: 'dashboard',
   
     component: DashboardComponent
+  },
+  {
+    path: 'transaction',
+  
+    component: TransComponent
   }
 ]
 
@@ -34,7 +40,8 @@ const appRoutes:Routes = [
     AppComponent,
     LoginFormComponent, 
     DashboardComponent,
-    UserComponent
+    UserComponent,
+    TransComponent
     ],
 
   imports: [
