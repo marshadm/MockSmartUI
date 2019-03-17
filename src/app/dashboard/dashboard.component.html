@@ -1,0 +1,58 @@
+<p>
+  You are authenticated. Hello {{name}}
+  <a routerLink="/">Go back</a>
+
+</p>
+
+<!-- <form id = "formNewProduct" name = "formNewProduct" #productData = "ngForm" (ngSubmit) = "addNewProduct(productData.value)">
+    <label>Name: </label><input type = "text" name="transaction" id="transaction" placeholder="name" ngModel><br>
+    <label>Color: </label><input type = "text" name="color" id="color" placeholder="color" ngModel><br>
+    <input type="submit" value = "Add Product" routerLink="/users">
+  </form> -->
+
+<form id = "formNewProduct" name = "formNewProduct" #productData = "ngForm">
+ 
+  <table width="300" cellspacing="5" cellpadding="2">
+        <tr>
+          <td> <label>Transaction description </label></td>
+         <td><input type = "text" name="transaction_details" id="transaction_details" placeholder="name" ngModel><br></td>
+       </tr>
+       <tr>
+          <td> <label>Spend Category </label></td>
+          <select id="spend_category">
+              <option value="Medical" id="medical">Medical</option>
+              <option value="Travel" id="travel">Travel</option>
+              <option value="Loans" id="loan">Loans</option>
+              <option value="Utility Bills" id="bills">UtilityBills</option>
+              <option value="Education">Education</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Misc">Misc</option>
+            </select>
+         
+       </tr>
+       <tr>
+          <td> <label>Amount </label></td>
+         <td><input type = "text" name="amount" id="amount" placeholder="name" ngModel><br></td>
+       </tr>
+       <tr>
+          <td> <label>Date </label></td>
+         <td><input type = "text" name="date" id="date" placeholder="date" ngModel><br></td>
+       </tr>
+       <tr>
+          <td> <label>Payment Type </label></td>
+          <select>
+              <option value="MakePayment" id="makePayment">MakePayment</option>
+              <option value="RecievePayment">RecievePayment</option>
+            </select>
+       </tr>
+ </table>
+  <!-- <button type="submit"  routerLink="/users">add </button> -->
+  <!-- <button type="submit" class="btn btn-success">Submit</button> -->
+  <button type="button" (click)="addNewProduct(productData.value)" routerLink="/users">Add</button>
+  <!-- <input type="submit" value = "Add Product" routerLink="/users"> -->
+</form>
+
+
+     
+
+<a routerLink="/dashboard">Go back</a>
